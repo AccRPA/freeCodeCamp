@@ -1,35 +1,25 @@
 function smallestCommons(arr){
-  const newArr = arr.sort((a, b) => a - b);
-  let min = newArr[0];
-  let max = newArr[1];
-  let found = false;
-  let index = 1;
-
-  const arrMin = [];
-  const arrMax = [];
-  let result = 0;
-
-  while (!found) {
-    let minMul = min * index;
-    let maxMul = max * index;
-    if (arrMax.indexOf(minMul) !== -1) {
-      found = true;
-      result = minMul;
-    } else if (arrMin.indexOf(maxMul) !== -1) {
-      found = true;
-      result = maxMul;
-    }
-    arrMin.push(minMul);
-    arrMax.push(maxMul);
-
-    if (found){
-      for (let i = min; i <= max; i++){
-          found &= (result % i === 0);
-      }
-    }
-    index++;
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let array = [];
+  // Creating a full array of all values in the range
+  for (min; min <= max; min++){
+     array.push(min);
   }
-  return result;
+  // Creating the function that .every will operate on
+  const lowestCommon = (currentValue) => n % currentValue === 0;
+  let common = false;
+  let n = max* (max-1);
+  
+  // Checking whether the first value for n is the lowestCommon Multiple
+  common =  array.every(lowestCommon);
+  
+  //Checking for a true result from the array
+  while (common === false){
+      n++;
+      common =  array.every(lowestCommon);
+  }
+  return n;
 }
 
 console.log(
