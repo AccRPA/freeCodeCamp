@@ -1,26 +1,11 @@
-function convertToRoman(num) {
-  const obj = {
-    1000: 'M',
-    900: 'CM',
-    500: 'D',
-    400: 'CD',
-    100: 'C',
-    90: 'XC',
-    50: 'L',
-    40: 'XL',
-    10: 'X',
-    9: 'IX',
-    5: 'V',
-    4: 'IV',
-    1: 'I'
-  };
-
+function convertToRoman(num) { 
+  const arrRo = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  const arrAr = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+  
   // convert the num into a string to get the array with each digit
   const numStr = `${num}`;
   const arrStr = numStr.split('');
 
-  // getting the keys sorted from the greater to the smallest
-  const arrKeysSorted = Object.keys(obj).sort((a, b) => b - a);
   let resultStr = '';
 
   // loop every digit
@@ -31,18 +16,18 @@ function convertToRoman(num) {
 
     if (value > 0) {
       // filtering the keys by the ones with same length as the exponent and less or equal than the value
-      const arrayCandidates = arrKeysSorted.filter((item) => item.length === (exp + 1) && Number(item) <= value);
+      const arrayCandidates = arrRo.filter((item) => `${item}`.length === (exp + 1) && item <= value);
 
       for (let j = 0; j < arrayCandidates.length; j++) {
         // for each candidate check if it can be applied more than once
         while (arrayCandidates[j] <= value) {
-          resultStr += `${obj[arrayCandidates[j]]}`;
-          value -= Number(arrayCandidates[j]);
+          resultStr += `${arrAr[arrRo.indexOf(arrayCandidates[j])]}`;
+          value -= arrayCandidates[j];
         }
       }
     }
   }
-  
+
   return resultStr;
 }
 
