@@ -14,41 +14,36 @@ function convertToRoman(num) {
     4: 'IV',
     1: 'I'
   };
-  
+
   // convert the num into a string to get the array with each digit
   const numStr = `${num}`;
   const arrStr = numStr.split('');
-  
+
   // getting the keys sorted from the greater to the smallest
-  const arrKeysSorted = Object.keys(obj).sort((a,b) => b - a);
-  const arrRoman = [];
+  const arrKeysSorted = Object.keys(obj).sort((a, b) => b - a);
+  let resultStr = '';
 
   // loop every digit
   for (let i = 0; i < arrStr.length; i++) {
     const exp = (arrStr.length - i - 1);
     const units = Math.pow(10, exp); // 1, 10, 100, etc
     let value = Number(arrStr[i]) * units;
-    
-    if (value > 0){
+
+    if (value > 0) {
       // filtering the keys by the ones with same length as the exponent and less or equal than the value
       const arrayCandidates = arrKeysSorted.filter((item) => item.length === (exp + 1) && Number(item) <= value);
-      
-      for (let j = 0; j < arrayCandidates.length; j++){
+
+      for (let j = 0; j < arrayCandidates.length; j++) {
         // for each candidate check if it can be applied more than once
-        while (arrayCandidates[j] <= value){
-          arrRoman.push(arrayCandidates[j]);
+        while (arrayCandidates[j] <= value) {
+          resultStr += `${obj[arrayCandidates[j]]}`;
           value -= Number(arrayCandidates[j]);
         }
       }
-    }    
+    }
   }
-
-  // getting the translated string
-  const result = arrRoman.reduce((accumulator, item) => {
-    accumulator += `${obj[item]}`;
-    return accumulator;
-  }, '');
-  return result;
+  
+  return resultStr;
 }
 
 console.log(
