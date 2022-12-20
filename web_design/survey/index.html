@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">freeCodeCamp Survey Form Project</h1>
+      <p id="description">This is the survey project for the freecodeCamp new responsive web design certification</p>
+    </header>
+    <main>
+      <form id="survey-form">
+          <label for="name" id="name-label">Name <input type="text" id="name" name="name" required placeholder="Your name"/>
+          </label>
+          <label for="email" id="email-label">Email <input type="email" id="email" name="email" required placeholder="Your email"/>
+          </label>
+          <label for="number" id="number-label">Age <input type="number" id="number" name="age" min="16" max="100" placeholder="Your age"/>
+          </label>
+          <label for="dropdown">
+            How is your experience with freeCodeCamp so far?
+            <select id="dropdown" name="experience">
+              <option value="">Select one option</option>
+              <option value="1">Remarkable</option>
+              <option value="2">Amazing</option>
+              <option value="3">Exceptional</option>
+            </select>
+          </label>
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label for="cert-yes" class="custom-margin"><input type="radio" id="cert-yes" name="certification"/> Yes
+          </label>
+          <label for="cert-no" class="custom-margin"><input type="radio" id="cert-no" name="certification"/> No
+          </label>
+          <p>What courses do you miss?</p>
+          <label for="rust-course" class="custom-margin"><input type="checkbox" id="rust-course" name="rust-course" value="rust"/> Rust
+          </label>
+          <label for="next-course" class="custom-margin"><input type="checkbox" id="next-course" name="next-course" value="next"/> Next.js
+          </label>
+          <label for="bootstrap-course" class="custom-margin"><input type="checkbox" id="bootstrap-course" name="bootstrap-course" value="bootstrap"/> Bootstrap
+          </label>
+          <label for="vue-course" class="custom-margin"><input type="checkbox" id="vue-course" name="vue-course" value="vue"/> Vue
+          </label>
+          <label for="comments">Leave us a comment<textarea id="comments" name="comments" rows="5" cols="30" resize></textarea>
+          </label>
+          <input type="submit" value="Submit" class="submit-button" />
+      </form>
+    </main>
+  </body>
+</html>
