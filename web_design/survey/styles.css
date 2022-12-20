@@ -1,0 +1,64 @@
+body {
+  background: linear-gradient(180deg, SkyBlue, LightBlue, LightSkyBlue);
+  margin: 0;
+  font-family: Helvetica, Tahoma;
+  font-size: 16px;
+}
+
+header {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+header p {
+  font-style: italic;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+
+main {
+  width: 60%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 2em auto;
+}
+
+label {
+  display: block;
+  margin: 1em 0;
+}
+
+input, select, textarea {  
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 2px solid SteelBlue;
+}
+
+input, select, textarea:hover{
+  outline: none;
+}
+
+input[type="radio"], 
+input[type="checkbox"]{
+  width: unset;
+  margin: 0;
+}
+
+textarea{
+  resize: vertical;
+}
+
+.custom-margin{
+  margin: 0.5em 0;
+}
+
+.submit-button{
+  font-size: 16px;
+  background-color: SteelBlue;
+  color: #ffffff;
+}
