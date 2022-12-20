@@ -28,9 +28,9 @@
             </select>
           </label>
           <p>Would you recommend freeCodeCamp to a friend?</p>
-          <label for="cert-yes" class="custom-margin"><input type="radio" id="cert-yes" name="certification"/> Yes
+          <label for="cert-yes" class="custom-margin"><input type="radio" id="cert-yes" name="certification" value="yes"/> Yes
           </label>
-          <label for="cert-no" class="custom-margin"><input type="radio" id="cert-no" name="certification"/> No
+          <label for="cert-no" class="custom-margin"><input type="radio" id="cert-no" name="certification" value="no"/> No
           </label>
           <p>What courses do you miss?</p>
           <label for="rust-course" class="custom-margin"><input type="checkbox" id="rust-course" name="rust-course" value="rust"/> Rust
@@ -43,7 +43,7 @@
           </label>
           <label for="comments">Leave us a comment<textarea id="comments" name="comments" rows="5" cols="30" resize></textarea>
           </label>
-          <input type="submit" value="Submit" class="submit-button" />
+          <input type="submit" id="submit" value="Submit" class="submit-button" />
       </form>
     </main>
   </body>
