@@ -1,1 +1,120 @@
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #eee;
+  font-family: 'Lato', sans serif;
+  font-size: 1rem;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20 50px;
+  border-bottom: 1px solid grey;
+  background-color: #eee;
+}
+
+#header-img{
+  max-width: 300px;  
+  width: auto;
+  height: auto;
+  margin-left: -25px;
+}
+
+#nav-bar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+a.nav-link {
+  margin: 0 0 0 25px;
+  text-decoration: none;
+  color: 000;
+}
+
+main {
+  margin-top: 50px;
+  padding: 50px 100px;
+}
+
+#intro {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro h1 {
+  margin-bottom: 20px;
+}
+
+#intro #form {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro #form input[type="email"] {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid grey;  
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+#intro #form input[type="submit"] {
+  padding: 5px 30px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#features {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-item {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.feature-item i {
+  font-size: 3rem;
+  margin: auto;
+  padding: 0 25px;
+  width: 20vw;
+  max-width: 200px;
+  color: orange;
+  text-align:center;
+}
+
+#how-it-works {
+  margin-top: 80px;
+  display:flex;
+  justify-content: center;
+}
+
+#pricing {
+  margin-top 80px;
+}
+
