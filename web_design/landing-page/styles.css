@@ -44,7 +44,7 @@ a.nav-link {
 
 main {
   margin-top: 50px;
-  padding: 50px 100px;
+  padding: 50px 0px;
 }
 
 #intro {
@@ -115,6 +115,55 @@ main {
 }
 
 #pricing {
-  margin-top 80px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
 }
 
+.price-item {
+  width: 300px;
+  border: 1px solid grey;
+}
+
+.price-middle {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.price-item .title {
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  background-color: darkgrey;
+  padding: 20px 0px;
+  font-weight: bold;
+}
+
+.price-item .body {
+  text-align: center;
+  color: black;
+}
+
+.price-item .body .price {
+  font-size: 24px;
+  margin: 20px 0px;
+}
+
+.price-item .body .text p {
+  margin: 10px 0px
+}
+
+.price-item .body input {
+  margin: 20px 0px;
+  background-color: orange;
+  border-radius: 5px;
+  border: 1px solid orange;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.price-item .body input:hover{
+  background-color: darkorange;
+  border: 1px solid darkorange;
+}
