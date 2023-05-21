@@ -69,10 +69,15 @@ body {
 }
 
 .project-title {
-  text-align: center;
-  padding: 10px 20px;
+  text-align: center;  
   background-color: grey;
+}
+
+.project-title a {
+  text-decoration: none;
   color: white;
+  display: block;
+  padding: 10px 20px;
 }
 
 .project-body {
