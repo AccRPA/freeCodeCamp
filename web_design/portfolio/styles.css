@@ -1,1 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
 
+body {
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+  position: fixed;
+}
+
+#navbar{  
+  display: inline-block;
+  z-index: 1;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#welcome-section {
+  position: absolute;
+  margin-top: 100px;
+}
