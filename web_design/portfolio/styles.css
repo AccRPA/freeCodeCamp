@@ -45,6 +45,13 @@ body {
   color: grey;
 }
 
+#profile-link {
+  text-decoration: none;
+  color: black;  
+  margin-top: 10px;
+  display: block;
+}
+
 #projects {
   padding-top: 70px;
   display:flex;
@@ -59,6 +66,25 @@ body {
 .project-tile {
   border: 1px solid gray;
   margin: 0px 10px;
+}
+
+.project-title {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+}
+
+.project-body {
+  padding: 10px 20px;
+  color: black;
+  text-align: center;
+}
+
+.project-body ul {
+  margin-top: 10px;
+  list-style-type: none;
+  font-size: 14px;
 }
 
 #footer {
@@ -77,4 +103,8 @@ body {
 
 .last-section {
   padding-bottom: 60px;
+}
+
+@media screen and (max-width: 768px){
+  
 }
