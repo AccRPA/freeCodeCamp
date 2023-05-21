@@ -106,5 +106,11 @@ body {
 }
 
 @media screen and (max-width: 768px){
-  
+  .project-container {
+    flex-direction: column;    
+  }
+
+  .project-tile {
+    margin: 10px 0px;
+  }
 }
